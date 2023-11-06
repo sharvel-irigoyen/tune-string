@@ -1,0 +1,14 @@
+
+{
+"scripts": {
+        "compile-sass": "node-sass src/sass/app.scss public/css/app.css"
+},
+
+  "dependencies": {
+    "bootstrap": "^5"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+
+}

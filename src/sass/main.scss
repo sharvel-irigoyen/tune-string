@@ -1,0 +1,288 @@
+// // light
+// @font-face {
+//     font-family: 'Fixture';
+//     src: url('../fonts/FixtureLight.otf') format('opentype');
+//     font-weight: 300;
+//     font-style: normal;
+// }
+
+// // regular
+// @font-face {
+//     font-family: 'Fixture';
+//     src: url('../fonts/FixtureRegular.otf') format('opentype');
+//     font-weight: 400;
+//     font-style: normal;
+// }
+
+// //semibold
+// @font-face {
+//     font-family: 'Fixture';
+//     src: url('../fonts/FixtureSemiBold.otf') format('opentype');
+//     font-weight: 600;
+//     font-style: normal;
+// }
+
+// //bold
+// @font-face {
+//     font-family: 'Fixture';
+//     src: url('../fonts/FixtureBold.otf') format('opentype');
+//     font-weight: 700;
+//     font-style: normal;
+// }
+
+// //extrabold
+// @font-face {
+//     font-family: 'Fixture';
+//     src: url('../fonts/FixtureExtraBold.otf') format('opentype');
+//     font-weight: 800;
+//     font-style: normal;
+// }
+
+// //hugblack
+// @font-face {
+//     font-family: 'Fixture';
+//     src: url('../fonts/FixtureBlack.otf') format('opentype');
+//     font-weight: 900;
+//     font-style: normal;
+// }
+
+
+//pseudo element triangle
+@mixin triangle($direction, $size, $color) {
+    position: absolute;
+    width: 0;
+    height: 0;
+    content: '';
+    border-style: solid;
+
+    $base-size: $size;
+    $height: $size * 0.8;
+
+    @if $direction ==up {
+        border-width: 0 $base-size $height $base-size;
+        border-color: transparent transparent $color transparent;
+        top: -$height;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    @else if $direction ==down {
+        border-width: $height $base-size 0 $base-size;
+        border-color: $color transparent transparent transparent;
+        top: 0;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    @else if $direction ==left {
+        border-width: $base-size $height $base-size 0;
+        border-color: transparent $color transparent transparent;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -$base-size;
+    }
+
+    @else if $direction ==right {
+        border-width: $base-size 0 $base-size $height;
+        border-color: transparent transparent transparent $color;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -$base-size;
+    }
+}
+
+
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+
+    // Estilos para pantallas más grandes que el breakpoint lg
+    .triangle-lg {
+        &:after {
+            @include triangle(up, 16px, #ffd289); // Puedes ajustar el tamaño y el color aquí
+        }
+    }
+
+    .fa-triangle-lg:after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f0d8";
+        color: white;
+        position: absolute;
+        font-size: 3rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        top: 0px;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+//bullet for li
+@mixin bullet($size, $color) {
+    position: absolute;
+    width: $size;
+    height: $size;
+    content: '';
+    background-color: $color;
+    border-radius: 50%;
+    top: 7px;
+    left: 0px;
+}
+
+.bullet {
+    &:after {
+        @include bullet(6px, $blue); // Puedes ajustar el tamaño y el color aquí
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .bullet-lg {
+        &:after {
+            @include bullet(6px, $blue); // Puedes ajustar el tamaño y el color aquí
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .bullet-lg-none {
+        &:after {
+            content: none;
+        }
+    }
+}
+
+//background cover / contain
+
+@mixin background($position_y, $position_x, $size) {
+    background-position: $position_y $position_x;
+    background-size: $size;
+    background-repeat: no-repeat;
+}
+
+.cover-top {
+    @include background(top, center, cover);
+}
+
+.cover-middle {
+    @include background(center, center, cover);
+}
+
+
+.contain-middle-right {
+    @include background(center, right, contain);
+}
+
+.contain-middle-left {
+    @include background(center, left, contain);
+}
+
+.contain-middle {
+    @include background(center, center, contain);
+}
+
+
+
+//decorations
+.decorate {
+    position: relative;
+    background: var(--blue);
+    color: #fff;
+    overflow: hidden;
+}
+
+.decorate::before,
+.decorate::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+}
+
+.decorate::after {
+    top: 0;
+    height: 60px;
+    right: 0px;
+    transform: skewY(8deg);
+    transform-origin: right;
+}
+
+.decorated-text::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0px 30px;
+    border-color: transparent var(--bs-blue) transparent transparent;
+    left: -41.2px;
+    z-index: -1;
+}
+
+@media only screen and (min-width: 992px) {
+    .decorated-text::before {
+        border-width: 40px 40px 0px 40px;
+        left: -56.2px;
+
+    }
+
+    .decorate::after {
+        height: 194px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .decorate::before {
+        top: 66px;
+        left: -50px;
+        height: 261px;
+        transform: skewY(-60deg);
+        transform-origin: left;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .decorate::after {
+        height: 250px;
+    }
+
+    .nuestros-cursos {
+        margin-top: -80px !important;
+    }
+}
+
+// ======= footer triangle decoration  ======== //
+footer h5:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 25px 0px 25px;
+    border-color: transparent var(--bs-blue) transparent transparent;
+    right: 0px;
+    top: 50%;
+    z-index: -1;
+    transform: translateY(-50%);
+}
+
+// end decorations
+
+//header
+header.h_fixed {
+    background-color: #1e132d !important;
+}
+
+header .active div {
+    color: var(--bs-yellow) !important;
+    --bs-bg-opacity: 0.25;
+    background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+    font-weight: 600;
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    header .active div {
+        background-color: transparent !important;
+    }
+}
