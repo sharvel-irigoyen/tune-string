@@ -258,7 +258,7 @@ header img {
 .plaprof{
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos horizontalmente */
+    align-items: center; 
     
 }
 .plan-popular-1{
@@ -281,7 +281,7 @@ header img {
 @media screen and (min-width: 768px) {
     .Planes{
         display: flex;
-        flex-direction: column; /* Puedes cambiar a row si prefieres una disposición horizontal */
+        flex-direction: column; 
         align-items: center;
         justify-content: center;
         height: 100vh;
