@@ -43,3 +43,275 @@ header img {
 @media screen and (min-width:1400px){
 .container{max-width:1140px}
 }
+
+/* Contacto */
+
+.Contactos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:url(../img/bg-mov.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+    padding: 10px;
+    height: 100%;
+    
+}
+.Texto-Contacto{
+    margin-top: 70px;
+    padding:20px;
+    
+    color: white;
+}
+.Texto-Contacto span{
+    color: #ed3a85 ;
+}
+.Box-Contacto{
+    border-radius: 30px;
+    width: 350px;
+    background-color: #ed3a85 ;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding:30px;
+    color: white;
+}
+.Box-Contacto h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.Box-Contacto form{
+    margin-left: 20px;
+}
+.Box-Contacto input[type="text"]{
+    margin-bottom:20px;
+    width: 90%;
+}
+.Box-Contacto label {
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+
+.boton-contact {
+    display: flex;
+    justify-content:right;
+    width: 90%;
+}
+.boton-contact-submit{
+    margin-top: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color:white;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: right;
+    color: black;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items:flex-start;
+    
+    padding-right: 20px;
+}
+.checkbox-container input {
+    margin-left:10px;
+    margin-top: 7px;
+    transform: scale(1.5);
+    
+}
+.checkbox-container label {
+    padding-left: 15px;
+    font-size: 17px; 
+}
+
+
+@media screen and (min-width: 768px) {
+    .Contactos {
+        flex-direction: row; 
+        justify-content: space-around; 
+        align-items: center;
+        height: 100vh;
+    }
+    .Texto-Contacto{
+        
+        width: 50%;
+    }
+    
+}
+@media screen and (min-width: 1000px) {
+    
+    .Box-Contacto{
+        width: 450px;
+    }
+}
+
+/* Plan */
+
+.Planes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:url(../img/bg2.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    
+
+}
+
+.Planes-Titulo{
+    margin-top: 70px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.Planes-Titulo h2{
+    font-size: 60px;
+}
+.Planes-Cajas{
+    width: 290px;
+    position: relative;
+}
+.plan {
+    
+    border-radius: 25px;
+    margin: 0px 20px 20px 20px;
+    padding: 20px;
+    background-color: #26297B;
+    text-align: center;
+    
+    margin-top: 48px;
+}
+.linea-horizontal {
+    border: none;
+    border-top: 2px solid white;
+    margin: 0px;
+    
+}
+.plan h3 {
+    text-align: center;
+    font-size: 27px;
+    
+}
+.plan-h3-1{
+    color: #ed3a85;
+}
+.plan-h3-2{
+    color: #8DCF38;
+}
+.plan p { 
+    font-size: 15px;
+}
+.plan button{
+    margin-top: 30px;
+    width: 95%;
+    border-radius: 15px;
+    padding: 10px;
+}
+.plan-button-1{
+    background-color: #8DCF38;
+}
+.plan-button-2{
+    background-color: #ed3a85;
+}
+@keyframes destello {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.plan-texto-sub {
+    font-size: 12px !important;
+    margin-bottom: 15px;
+}
+.plan span{ 
+    font-size: 40px;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    filter: brightness(2);
+    animation: destello 2s infinite;
+}
+.plan-texto-span{
+    margin: 0px;
+}
+.plan-texto-izquierda{
+    text-align: left;
+    margin: 0px;
+    
+}
+.plaprof{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    
+}
+.plan-popular-1{
+    
+}
+.plan-popular-2{
+    
+    color: white;
+    background-color: #A16DA4;
+    padding: 10px 25px;
+    border-radius: 12px 12px 0px 0px;
+    position: absolute;
+    
+    
+    
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .Planes{
+        display: flex;
+        flex-direction: column; /* Puedes cambiar a row si prefieres una disposición horizontal */
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        
+    }
+    .Planes-Titulo{
+        margin-top: 0px;
+        margin-bottom: 60px;
+    }
+    .Planes-Cajas {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        width: 780px;
+        
+    }
+    .plan{
+        width: 350px;
+    }
+
+}
+@media screen and (min-width: 1000px) {
+    .Planes-Cajas {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        width: 80%;
+        
+    }
+    .plan{
+        width: 350px;
+    }
+}
