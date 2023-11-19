@@ -9,69 +9,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="css/app.css">
+    <!-- <link rel="stylesheet" href="css/app.css"> -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/productos.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous" defer></script>
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous" defer></script> -->
     <script src="https://kit.fontawesome.com/de504e7beb.js" crossorigin="anonymous"></script>
     <script src="js/main.js" defer></script>
 </head>
 
 <body>
-    <header class="pt-2 pt-lg-3 position-fixed position-md-relative w-100 z-3 bg-transparent trans text-white fs-6">
-        <div
-            class="container flex-wrap pb-3 px      -4 d-flex align-items-center justify-content-between position-relative z-20">
-            <div class="logo">
-                <a href="/public/index.html">
-                    <img src="img/logo.png">
-                </a>
-            </div>
-
-            <button class="d-lg-none navbar-toggler action-toggle-menu" data-bs-toggle="collapse"
-                data-bs-target="#main-menu-wraper" type="button">
-                <i class="text-white fa fa-bars fa-lg"></i>
-            </button>
-
-            <div id="main-menu-wraper"
-                class="collapse flex-grow-1 d-lg-flex align-items-lg-center justify-content-lg-end flex-lg-grow-0 w-100 w-md-auto  mx-auto mx-md-0">
-
-                <ul
-                    class="d-flex flex-column text-center flex-lg-row justify-content-center py-3 py-md-0 align-items-md-center">
-                    <li class="d-flex flex-column align-items-center px-lg-4" role="button">
-                        Inicio
-                    </li>
-                    <li class="d-flex flex-column align-items-center px-lg-4" role="button">
-                        Nosotros
-                    </li>
-                    <li class="d-flex flex-column align-items-center px-lg-4" role="button">
-                        Música
-                    </li>
-                    <li class="d-flex flex-column align-items-center my-3 my-md-0 px-lg-4">
-                        <a class="border border-2 rounded-pill border-pink-500 text-pink-500 px-4" role="button" href="login.html">
-                            LOG IN
-                        </a>
-
-                    </li>
-                </ul>
-            </div>
+    <header class="px-2 px-lg-5 py-2 w-100 d-lg-flex align-items-lg-center  justify-content-lg-around position-absolute">
+        <div class="d-flex align-items-center justify-content-between">
+            <img src="img/logo.png" />
+            <i id="btn-menu" class="px-2 py-2 fa-solid fa-bars text-white d-lg-none cursor-pointer"
+                onclick="toggleNav()"></i>
         </div>
+
+        <nav id="main-nav" class="trans" style="display:none">
+            <ul class="d-flex flex-column flex-lg-row align-items-center">
+                <li class="text-white px-lg-3"><a href="#">Inicio</a></li>
+                <li class="text-white px-lg-3 position-lg-relative" onclick="toggleSubNavProd()"><a href="#">Productos</a>
+                    <nav id="submain-nav-prod" class="position-lg-absolute w-150 py-2" style="display: none;">
+                        <ul>
+                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Afinacion</a></li>
+                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Quintaje</a></li>
+                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Pedales digitales</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li class="text-white px-lg-3" onclick="toggleSubNavAboutus()"><a href="#">Nosotros</a>
+                    <nav id="submain-nav-aboutus" class="position-lg-absolute w-150 py-2" style="display: none;">
+                        <ul>
+                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Mision</a></li>
+                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Vision</a></li>
+                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Objetivos</a></li>
+                        </ul>
+                    </nav>
+                </li>
+                <li class="text-white px-lg-3 btn-login"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="text-white cover vh-lg-100">
-            <div class="container">
-                <div class="row justify-content-center justify-content-lg-start align-items-center section-header">
-                    <div class="col-10 col-lg-12">
-                        <h1 class="fs-3 fs-lg-1 fw-extrabold lh-sm my-5 my-md-0">La primera app <br> <span
-                                class="text-pink-500 ">diseñada para</span> <br>amantes
+        <section class="text-white cover banner">
+            <div class="container w-100">
+                <div
+                    class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-around align-items-center section-header">
+                    <div>
+                        <h1 class="fs-1">La primera app <br> <span class="text-pink">diseñada para</span> <br>amantes
                             de la música</h1>
                     </div>
-                    <div class="col-10 d-md-none">
+                    <div>
                         <img class="w-100" src="img/person-guitar.png">
                     </div>
                 </div>
@@ -88,15 +83,15 @@
             <div class="producto">
                 <img src="img/quintaje.jpg" alt="Quintaje">
                 <h2>Quintaje premium</h2>
-                <p>Podras quintar cuerda por cuerda tu instrumento con ayuda 
+                <p>Podras quintar cuerda por cuerda tu instrumento con ayuda
                     de un medidor de afinación especializado
                 </p>
             </div>
             <div class="producto">
                 <img src="img/pedales.jpg" alt="Efectos">
                 <h2>Pedales Digitales</h2>
-                <p>Aqui encontraras distintos pedales digitales que 
-                    tenemos disponibles, para que asi pueda afinar 
+                <p>Aqui encontraras distintos pedales digitales que
+                    tenemos disponibles, para que asi pueda afinar
                     tu instrumento de una forma mas rapida y sencilla</p>
             </div>
         </section>
@@ -104,18 +99,19 @@
             <div class="mision">
                 <img src="" alt="mision">
                 <h2>Misión</h2>
-                <p>Nuestra misión es proporcionar soluciones tecnológicas innovadoras para una afinación precisa, ajuste 
-                   óptimo y efectos de alta calidad. Creemos en la inspiración que surge de la combinación 
-                   de tecnología y música, impulsando a músicos de todos los niveles a alcanzar su máximo 
-                   potencial creativo.
+                <p>Nuestra misión es proporcionar soluciones tecnológicas innovadoras para una afinación precisa, ajuste
+                    óptimo y efectos de alta calidad. Creemos en la inspiración que surge de la combinación
+                    de tecnología y música, impulsando a músicos de todos los niveles a alcanzar su máximo
+                    potencial creativo.
                 </p>
             </div>
             <div class="vision">
                 <img src="" alt="vision">
                 <h2>Visión</h2>
-                <p>Nuestra visión es ser líderes en la transformación de la forma en que se crea, se comparte 
-                    y se disfruta la música en el mundo de los instrumentos de cuerda en el Perú. Queremos ser reconocidos 
-                    como la referencia en tecnología musical, ofreciendo soluciones que empoderen a músicos de 
+                <p>Nuestra visión es ser líderes en la transformación de la forma en que se crea, se comparte
+                    y se disfruta la música en el mundo de los instrumentos de cuerda en el Perú. Queremos ser
+                    reconocidos
+                    como la referencia en tecnología musical, ofreciendo soluciones que empoderen a músicos de
                     todas las edades y niveles de experiencia.
                 </p>
             </div>
@@ -124,27 +120,30 @@
                 <h2>Objetivos</h2>
                 <ol>
                     <li>
-                        Desarrollar continuamente tecnologías innovadoras para mejorar la afinación y 
-                        los efectos en instrumentos de cuerda, manteniendo a StringTech a la vanguardia de la innovación.
+                        Desarrollar continuamente tecnologías innovadoras para mejorar la afinación y
+                        los efectos en instrumentos de cuerda, manteniendo a StringTech a la vanguardia de la
+                        innovación.
                     </li>
                     <li>
-                        Posicionarnos como líderes y referencia en tecnología musical para instrumentos de cuerda, 
+                        Posicionarnos como líderes y referencia en tecnología musical para instrumentos de cuerda,
                         destacando nuestra experiencia y compromiso con soluciones tecnológicas de alto rendimiento.
                     </li>
                     <li>
                         Empoderar a músicos de todas las edades y niveles de experiencia mediante programas educativos
-                         que maximicen el uso de nuestras soluciones tecnológicas, contribuyendo al desarrollo continuo de 
-                         la comunidad musical.
+                        que maximicen el uso de nuestras soluciones tecnológicas, contribuyendo al desarrollo continuo
+                        de
+                        la comunidad musical.
                     </li>
                 </ol>
             </div>
-        </section> 
+        </section>
 
         <section class="Contacto">
             <div class="Contactos">
                 <div class="Texto-Contacto">
-                    <h1 class="Texto1">¿Quieres destacar en el mundo de la música? 
-                        <br><span>Contáctanos</span> para comenzar tu viaje hacia el éxito musical.  </h1>
+                    <h1 class="Texto1">¿Quieres destacar en el mundo de la música?
+                        <br><span>Contáctanos</span> para comenzar tu viaje hacia el éxito musical.
+                    </h1>
                 </div>
                 <div class="Box-Contacto">
                     <h2 class="Texto2">Contáctanos</h2>
@@ -168,10 +167,10 @@
                         <div class="boton-contact">
                             <br>
                             <button class="boton-contact-submit" type="submit">Registrar</button>
-                            
+
                         </div>
                     </form>
-                </div>                
+                </div>
             </div>
         </section>
 
@@ -183,26 +182,26 @@
                 <div class="Planes-Cajas">
                     <div>
                         <div class="plan-popular-1">
-                            
+
                         </div>
                         <div class="plan">
                             <h3 class="plan-h3-1">PLAN PRINCIPIANTE</h3>
                             <hr class="linea-horizontal">
                             <p class="plan-texto-span"><span>FREE</span></p>
-                            <p class="plan-texto-sub">Siempre gratis para  los aficionados de la música</p>
+                            <p class="plan-texto-sub">Siempre gratis para los aficionados de la música</p>
                             <p class="plan-texto-izquierda">&#x2713; Afinador estándar</p>
                             <p class="plan-texto-izquierda">&#x2717; Quintaje</p>
                             <p class="plan-texto-izquierda">&#x2717; Pedales digitales</p>
                             <button class="plan-button-1">REGISTRATE</button>
                         </div>
                     </div>
-                    
+
                     <div class="plaprof">
                         <div class="plan-popular-2">
                             <a>Más Popular✨</a>
                         </div>
                         <div class="plan">
-                            
+
                             <h3 class="plan-h3-2">PLAN PROFESIONAL</h3>
                             <hr class="linea-horizontal">
                             <p class="plan-texto-span"><span>$20.00</span></p>
@@ -212,8 +211,8 @@
                             <p class="plan-texto-izquierda">&#x2713; Más de 100 Pedales digitales</p>
                             <button class="plan-button-2">REGISTRATE</button>
                         </div>
-                    </div>                    
-                </div>                   
+                    </div>
+                </div>
             </div>
         </section>
     </main>

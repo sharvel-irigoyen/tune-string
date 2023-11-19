@@ -1,26 +1,190 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
 a{
     text-decoration: none;
+    color: unset;
 }
-
+@import url('"https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800;900&display=swap');
+body {
+    margin: 0;
+    font-family: "Karla", sans-serif;
+    /* overflow-x:hidden; */
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
 main section:first-child{
     background-image:url(../img/bg-mov.jpg);
     padding-top: 74px;
 }
-
+.show{
+    display: block !important;
+}
+.text-white{
+    color: white;
+}
+.d-none{
+    display: none !important;
+}
+.d-flex{
+    display: flex !important;
+}
+.justify-content-center{
+    justify-content: center !important;
+}
+.justify-content-start{
+    justify-content: start !important;
+}
+.justify-content-between{
+    justify-content:  space-between!important;
+}
+.align-items-center{
+    align-items: center !important;
+}
+.align-items-start{
+    align-items: start !important;
+}
+.flex-column{
+    flex-direction: column !important;
+}
+.flex-row{
+    flex-direction: row !important;
+}
+.px-2{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+.py-2{
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+.py-1{
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+.w-100{
+    width: 100% !important;
+}
+.w-150{
+    width: 150% !important;
+}
 .cover{
     background-repeat:no-repeat;
     background-size:cover;
     background-position: center center;
 }
+.cursor-pointer{
+    cursor: pointer;
+}
+.fs-1{
+    font-size: 30px !important;
+}
+.position-relative{
+    position:  relative !important;
+}
+.position-absolute{
+    position:  absolute !important;
+}
 .trans{-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
 
+
+@media screen and (min-width: 992px) {
+    .d-lg-flex{
+        display: flex !important;
+    }
+    .flex-lg-column{
+        flex-direction: column !important;
+    }
+    .flex-lg-row{
+        flex-direction: row !important;
+    }
+    .justify-content-lg-center{
+        justify-content: center !important;
+    }
+    .justify-content-lg-start{
+        justify-content: start !important;
+    }
+    .justify-content-lg-between{
+        justify-content:  space-between!important;
+    }
+    .justify-content-lg-around{
+        justify-content:  space-around!important;
+    }
+    .justify-content-lg-evenly{
+        justify-content:  space-evenly!important;
+    }
+    .align-items-lg-center{
+        align-items: center !important;
+    }
+    .align-items-lg-start{
+        align-items: start !important;
+    }
+    .d-lg-none{
+        display: none !important;
+    }
+    .px-lg-2{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .py-lg-1{
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    .py-lg-2{
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+    .px-lg-3{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .py-lg-3{
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+    .px-lg-4{
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    .py-lg-4{
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+    .px-lg-5{
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+    .py-lg-5{
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+    .fs-1{
+        font-size: 50px !important;
+    }
+    .position-lg-relative{
+        position:  relative !important;
+    }
+    .position-lg-absolute{
+        position:  absolute !important;
+    }
+    #main-nav{
+        display: block !important;
+    }
+
+}
 header.h_fixed{position:fixed!important;animation:smoothScroll 1s forwards;box-shadow:0 0 60px rgb(0 0 0 / 50%);z-index:1001;top:0}
 
 header img {
     height: 50px;
     width: auto;
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     header img {
         height: 94px;
         width: auto;
@@ -38,13 +202,12 @@ header img {
     .section-header{
         height: calc(100vh - 126px);
     }
-}
+} */
+    .fs-1{
+        font-size: 30px;
+    }
 
-@media screen and (min-width:1400px){
-.container{max-width:1140px}
-}
-
-/* Contacto */
+/* `cto */
 
 .Contactos{
     display: flex;
@@ -56,12 +219,12 @@ header img {
     background-position: center center;
     padding: 10px;
     height: 100%;
-    
+
 }
 .Texto-Contacto{
     margin-top: 70px;
     padding:20px;
-    
+
     color: white;
 }
 .Texto-Contacto span{
@@ -114,36 +277,36 @@ header img {
 .checkbox-container {
     display: flex;
     align-items:flex-start;
-    
+
     padding-right: 20px;
 }
 .checkbox-container input {
     margin-left:10px;
     margin-top: 7px;
     transform: scale(1.5);
-    
+
 }
 .checkbox-container label {
     padding-left: 15px;
-    font-size: 17px; 
+    font-size: 17px;
 }
 
 
 @media screen and (min-width: 768px) {
     .Contactos {
-        flex-direction: row; 
-        justify-content: space-around; 
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
         height: 100vh;
     }
     .Texto-Contacto{
-        
+
         width: 50%;
     }
-    
+
 }
 @media screen and (min-width: 1000px) {
-    
+
     .Box-Contacto{
         width: 450px;
     }
@@ -161,9 +324,9 @@ header img {
     background-position: center center;
     padding: 10px;
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
     color: #fff;
-    
+
 
 }
 
@@ -180,25 +343,25 @@ header img {
     position: relative;
 }
 .plan {
-    
+
     border-radius: 25px;
     margin: 0px 20px 20px 20px;
     padding: 20px;
     background-color: #26297B;
     text-align: center;
-    
+
     margin-top: 48px;
 }
 .linea-horizontal {
     border: none;
     border-top: 2px solid white;
     margin: 0px;
-    
+
 }
 .plan h3 {
     text-align: center;
     font-size: 27px;
-    
+
 }
 .plan-h3-1{
     color: #ed3a85;
@@ -206,7 +369,7 @@ header img {
 .plan-h3-2{
     color: #8DCF38;
 }
-.plan p { 
+.plan p {
     font-size: 15px;
 }
 .plan button{
@@ -239,7 +402,7 @@ header img {
     font-size: 12px !important;
     margin-bottom: 15px;
 }
-.plan span{ 
+.plan span{
     font-size: 40px;
     font-weight: bold;
     color: yellow;
@@ -253,27 +416,27 @@ header img {
 .plan-texto-izquierda{
     text-align: left;
     margin: 0px;
-    
+
 }
 .plaprof{
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    
+    align-items: center;
+
 }
 .plan-popular-1{
-    
+
 }
 .plan-popular-2{
-    
+
     color: white;
     background-color: #A16DA4;
     padding: 10px 25px;
     border-radius: 12px 12px 0px 0px;
     position: absolute;
-    
-    
-    
+
+
+
 }
 
 
@@ -281,11 +444,11 @@ header img {
 @media screen and (min-width: 768px) {
     .Planes{
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100vh;
-        
+
     }
     .Planes-Titulo{
         margin-top: 0px;
@@ -294,9 +457,9 @@ header img {
     .Planes-Cajas {
         display: flex;
         flex-direction: row;
-        justify-content: space-around; 
+        justify-content: space-around;
         width: 780px;
-        
+
     }
     .plan{
         width: 350px;
@@ -307,9 +470,9 @@ header img {
     .Planes-Cajas {
         display: flex;
         flex-direction: row;
-        justify-content: space-around; 
+        justify-content: space-around;
         width: 80%;
-        
+
     }
     .plan{
         width: 350px;
