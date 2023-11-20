@@ -294,6 +294,7 @@ header img {
 
 @media screen and (min-width: 768px) {
     .Contactos {
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
@@ -355,10 +356,12 @@ header img {
 .linea-horizontal {
     border: none;
     border-top: 2px solid white;
-    margin: 0px;
+    
 
 }
 .plan h3 {
+    margin: 0px;
+    margin-bottom: 10px;
     text-align: center;
     font-size: 27px;
 
@@ -428,7 +431,7 @@ header img {
 
 }
 .plan-popular-2{
-
+    margin-top: 7px;
     color: white;
     background-color: #A16DA4;
     padding: 10px 25px;

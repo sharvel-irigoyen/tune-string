@@ -1,20 +1,142 @@
-.productos {
+.productos-container{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:url(../img/bg2.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+    height: 100%;
+    padding-bottom: 100px;
 }
 
+
+
+
+.productos-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.productos-title{
+    color: greenyellow;
+    margin: 20px;
+    margin-top: 100px;
+    font-size: 34px;
+}
 .producto {
-    width: 25%; 
-    margin: 16px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-    background-color: #f9f9f9;
+    opacity: 1;
+    width: 200px;
+    margin-top: 30px;
+
+
+}
+.img-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-
+.texto {
+    padding: 0px 10px 0px 10px;
+    margin: 0px;
+    visibility: hidden;
+    position: absolute;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.producto:hover .texto {
+    transition: opacity 5s ease;
+    visibility: visible;
+    opacity: 1;
+}
+.producto:not(:hover) .img-box {
+    transition: background-color 2s ease;
+    background-color: transparent;
+}
+.producto:hover .img-box{
+    transition: background-color 2s ease;
+    background-color: greenyellow;
+    
+}
+.producto:not(:hover) img {
+    transition: opacity 2s ease;
+    opacity: 1;
+}
+.producto:hover img{
+    transition: opacity 2s ease;
+    opacity: 0;
+    
+}
+.producto h2{
+    font-weight: bold;
+    color: greenyellow;
+    font-size: 24px;
+    text-align: center;
+}
+.producto .img-box{
+    
+    width: 200px;
+    height: 200px;
+    border: 3px solid greenyellow;
+    border-radius: 6px;
+    
+}
 .producto img {
-    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes */
-    height: auto; /* Mantiene la proporción de aspecto de las imágenes */
+    
+    width: 100%;
+    height: 100%;
+
+}
+
+@media screen and (min-width: 768px) {
+    .productos-container{
+        height: 100vh;
+    }
+    .productos-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+        
+    }
+
+    .productos-title{
+        
+        margin-top: 4%;
+        margin-bottom: 7%;
+    }
+    .producto {
+
+        margin: 0 20px; 
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    
+    .productos-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        
+        
+    }
+    
+
+    .producto {
+
+        margin: 0 15px; 
+    }
+
+
 }
