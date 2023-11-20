@@ -4,23 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <link rel="stylesheet" href="css/reset.css">
     <title>Tune string</title>
 </head>
 
 <body>
-    <form id="resetPasswordForm"  method="post">
-        <h2>Reset Password</h2>
-        <p>Enter your new password below.</p>
+  <div class="reset">
+    <h2>Reestablecer Contraseña</h2>
+    <form>
+      <div class="password">
+        <input type="password" name="" required>
+        <label>Nueva Contraseña</label>
+      </div>
+      <div class="password">
+        <input type="password" name="" required>
+        <label>Confirmar Contraseña</label>
+      </div>
 
-        <label for="newPassword">New Password:</label>
-        <input type="password" id="newPassword" name="newPassword" required>
+      <a style="margin-right: 20px;"href="email.html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        regresar
+      </a>
+      <a href="login.html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
 
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required>
-
-        <button type="submit"><a href="login.html">Reset Password</a></button>
     </form>
+  </div>
 </body>
     
 </html>

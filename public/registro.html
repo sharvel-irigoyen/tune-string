@@ -4,25 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <link rel="stylesheet" href="css/registro.css">
     <title>Tune string</title>
 </head>
 
 <body>
-    <form id="FormRegistro"  method="post" >
-        <h2>Registrar Cuenta</h2>
-        <label for="newUsername">Nuevo Usuario:</label>
-        <input type="text" id="newUsername" name="newUsername" required>
-      
-        <label for="newPassword">Nueva Contraseña:</label>
-        <input type="password" id="newPassword" name="newPassword" required>
-      
-        <label for="confirmPassword">Confirmar Contraseña:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required>
-      
-        <button type="submit"><a href="login.html">Registrar Cuenta</a></button>
-        <p><a href="login.html" id="Login">Volver al inicio de sesión</a></p>
-      </form>
+    <div class="registro">
+        <h2>Fomulario de registro</h2>
+        <form>
+            <div class="user-box">
+                <input type="email" name="" required>
+                <label>Correo electronico</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="" required>
+                <label>Usuario</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required>
+                <label>Password</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required>
+                <label>Confirmar Contraseña</label>
+            </div>
+            
+            <a style="margin-right: 20px;"href="login.html">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                regresar
+            </a>
+            <a href="login.html">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
+
+        </form>
+    </div>
 </body>
     
 </html>

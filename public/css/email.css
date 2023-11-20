@@ -8,7 +8,7 @@ html {
     background-image: url("../img/bg-mov.jpg");
   }
   
-  .login-box {
+  .ContraseniaOlvidada {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,18 +21,18 @@ html {
     border-radius: 10px;
   }
   
-  .login-box h2 {
+  .ContraseniaOlvidada h2 {
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
     text-align: center;
   }
   
-  .login-box .user-box {
+  .ContraseniaOlvidada .email {
     position: relative;
   }
   
-  .login-box .user-box input {
+  .ContraseniaOlvidada .email input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -43,7 +43,7 @@ html {
     outline: none;
     background: transparent;
   }
-  .login-box .user-box label {
+  .ContraseniaOlvidada .email label {
     position: absolute;
     top:0;
     left: 0;
@@ -54,15 +54,15 @@ html {
     transition: .5s;
   }
   
-  .login-box .user-box input:focus ~ label,
-  .login-box .user-box input:valid ~ label {
+  .ContraseniaOlvidada .email input:focus ~ label,
+  .ContraseniaOlvidada .email input:valid ~ label {
     top: -20px;
     left: 0;
     color: #ed3a85;
     font-size: 12px;
   }
   
-  .login-box form a {
+  .ContraseniaOlvidada form a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -76,7 +76,7 @@ html {
     letter-spacing: 4px
   }
   
-  .login-box a:hover {
+  .ContraseniaOlvidada a:hover {
     background: #ed3a85;
     color: #fff;
     border-radius: 5px;
@@ -86,12 +86,12 @@ html {
                 0 0 100px #ed3a85;
   }
   
-  .login-box a span {
+  .ContraseniaOlvidada a span {
     position: absolute;
     display: block;
   }
   
-  .login-box a span:nth-child(1) {
+  .ContraseniaOlvidada a span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
@@ -109,7 +109,7 @@ html {
     }
   }
   
-  .login-box a span:nth-child(2) {
+  .ContraseniaOlvidada a span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -128,7 +128,7 @@ html {
     }
   }
   
-  .login-box a span:nth-child(3) {
+  .ContraseniaOlvidada a span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
@@ -147,7 +147,7 @@ html {
     }
   }
   
-  .login-box a span:nth-child(4) {
+  .ContraseniaOlvidada a span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
