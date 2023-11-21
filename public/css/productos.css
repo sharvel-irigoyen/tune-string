@@ -51,14 +51,18 @@
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+    opacity: 0;
+    transition: opacity 5.5s ease;
 }
+
 .producto:hover .texto {
-    transition: opacity 5s ease;
+    transition: opacity 5.5s ease;
     visibility: visible;
     opacity: 1;
+    
 }
 .producto:not(:hover) .img-box {
-    transition: background-color 2s ease;
+    transition: background-color 3s ease;
     background-color: transparent;
 }
 .producto:hover .img-box{
@@ -67,7 +71,7 @@
     
 }
 .producto:not(:hover) img {
-    transition: opacity 2s ease;
+    transition: opacity 3s ease;
     opacity: 1;
 }
 .producto:hover img{

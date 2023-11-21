@@ -207,111 +207,149 @@ header img {
         font-size: 30px;
     }
 
-/* `cto */
 
-.Contactos{
+
+/* Nosotros */
+.nosotros-box{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-image:url(../img/bg-mov.jpg);
+    justify-content: space-between;
+    background-image:url(../img/bg3.jpg);
     background-repeat:no-repeat;
     background-size:cover;
     background-position: center center;
-    padding: 10px;
+    padding: 60px 10px;
     height: 100%;
-
-}
-.Texto-Contacto{
-    margin-top: 70px;
-    padding:20px;
-
     color: white;
+    font-size: 24px;
+    font-weight: lighter;
 }
-.Texto-Contacto span{
-    color: #ed3a85 ;
+
+.nosotros-box h2{
+    font-size: 40px;
+    margin: 20px;
+    padding-bottom: 20px;
 }
-.Box-Contacto{
-    border-radius: 30px;
+
+
+
+.mision{
+    background-color: #26297B;
+    padding: 30px;
+    border-radius: 0px 20px 20px 0px;
+    margin-bottom: 30px;
+    margin-left: -10px;
+    
+}
+
+.mision h2{
+    font-size: 28px;
+    display: inline-block;
+    border-bottom: 3px solid white;
+    margin-bottom: 0px;
+    margin: 0px;
+    padding-bottom: 5px;
+}
+
+.vision{
+    background-color: #26297B;
+    padding: 30px;    
+    border-radius: 20px 0px 0px 20px;
+    margin-bottom: 30px;
+    margin-right: -10px;
+}
+
+.vision h2{
+    font-size: 28px;
+    display: inline-block;
+    border-bottom: 3px solid white;
+    margin-bottom: 0px;
+    margin: 0px;
+    padding-bottom: 5px;
+}
+
+.objetivo{
+    background-color: #26297B;
+    padding: 30px;    
+    border-radius: 0px 20px 20px 0px;
+    margin-bottom: 30px;
+    margin-left: -10px;
+}
+
+.objetivo h2{
+    font-size: 28px;
+    display: inline-block;
+    border-bottom: 3px solid white;
+    margin-bottom: 0px;
+    margin: 0px;
+    padding-bottom: 5px;
+}
+
+.objetivo ol li:before{
+    font-weight: bold;
+    content: "-";
+    margin-right: 15px; /* Ajusta el espacio entre el guion y el texto según tus preferencias */
+    margin-left: -27px;
+}
+
+.video{
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video h2{
+    color: white;
+    font-size: 28px;
+    margin-left: -35%;
+}
+
+.video iframe{
     width: 350px;
-    background-color: #ed3a85 ;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding:30px;
-    color: white;
-}
-.Box-Contacto h2{
-    text-align: center;
-    margin-bottom: 40px;
-}
-.Box-Contacto form{
-    margin-left: 20px;
-}
-.Box-Contacto input[type="text"]{
-    margin-bottom:20px;
-    width: 90%;
-}
-.Box-Contacto label {
-    font-size: 20px;
-    padding-left: 10px;
-}
+    height: 200px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 
-
-.boton-contact {
-    display: flex;
-    justify-content:right;
-    width: 90%;
-}
-.boton-contact-submit{
-    margin-top: 10px;
-    font-size: 15px;
-    text-decoration: none;
-    background-color:white;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: right;
-    color: black;
-}
-
-.checkbox-container {
-    display: flex;
-    align-items:flex-start;
-
-    padding-right: 20px;
-}
-.checkbox-container input {
-    margin-left:10px;
-    margin-top: 7px;
-    transform: scale(1.5);
-
-}
-.checkbox-container label {
-    padding-left: 15px;
-    font-size: 17px;
 }
 
 
 @media screen and (min-width: 768px) {
-    .Contactos {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        height: 100vh;
+    .mision{
+        width: 45%;
+        align-self: flex-start;
     }
-    .Texto-Contacto{
 
-        width: 50%;
+    .vision{
+        width: 45%;
+        align-self: flex-end;
+    }
+
+    .objetivo{
+        width: 45%;
+        align-self: flex-start;
+    }
+    
+    .video{
+        
+    }
+
+    .video iframe{
+        width: 70%;
+        height: 50vh;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .video iframe{
+        width: 700px;
+        height: 400px;
     }
 
 }
-@media screen and (min-width: 1000px) {
 
-    .Box-Contacto{
-        width: 450px;
-    }
-}
+
+
 
 /* Plan */
 
@@ -481,3 +519,129 @@ header img {
         width: 350px;
     }
 }
+
+
+
+/* Contactonos */
+
+.Contactos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:url(../img/bg-mov.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center center;
+    padding: 10px;
+    height: 100%;
+
+}
+.Texto-Contacto{
+    margin-top: 70px;
+    padding:20px;
+
+    color: white;
+}
+.Texto-Contacto span{
+    color: #ed3a85 ;
+}
+.Box-Contacto{
+    border-radius: 20px;
+    width: 350px;
+    background-color: #ed3a85 ;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding:30px;
+    color: white;
+}
+.Box-Contacto h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.Texto2{
+    font-size: 30px;
+}
+.Box-Contacto form{
+    margin-left: 20px;
+}
+.Box-Contacto input[type="text"]{
+    margin-bottom:20px;
+    width: 90%;
+}
+.Box-Contacto label {
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+
+.boton-contact {
+    display: flex;
+    justify-content:right;
+    width: 90%;
+}
+.boton-contact-submit{
+    margin-top: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color:white;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: right;
+    color: black;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items:flex-start;
+    
+    
+    padding-right: 20px;
+}
+.checkbox-container input {
+    margin-left:10px;
+    margin-top: 7px;
+    transform: scale(1.5);
+    
+}
+
+input{
+    border-radius: 10px; 
+    padding: 5px;
+}
+.checkbox-container label {
+    padding-left: 15px;
+    font-size: 17px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .Contactos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+    }
+
+
+
+    .Texto-Contacto{
+        margin-top: 0px;
+        width: 60%;
+        text-align: center;
+    }
+
+    .Box-Contacto{
+        margin-right: 20px;
+    }
+
+}
+@media screen and (min-width: 1000px) {
+
+    .Box-Contacto{
+        width: 35%;
+    }
+}
+
