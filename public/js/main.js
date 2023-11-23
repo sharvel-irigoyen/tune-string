@@ -19,12 +19,16 @@ function toggleNav() {
     header.style.backgroundColor = '#2a013ced';
 }
 function toggleSubNavProd() {
-    var nav = document.getElementById('submain-nav-prod');
-    nav.classList.toggle('show'); // Agrega o quita la clase 'show' para mostrar u ocultar la navegación
+    var navAboutUs = document.getElementById('submain-nav-aboutus');
+    var navProd = document.getElementById('submain-nav-prod');
+    navAboutUs.classList.remove('show');
+    navProd.classList.toggle('show'); // Agrega o quita la clase 'show' para mostrar u ocultar la navegación
 }
 function toggleSubNavAboutus() {
-    var nav = document.getElementById('submain-nav-aboutus');
-    nav.classList.toggle('show'); // Agrega o quita la clase 'show' para mostrar u ocultar la navegación
+    var navAboutUs = document.getElementById('submain-nav-aboutus');
+    var navProd = document.getElementById('submain-nav-prod');
+    navProd.classList.remove('show');
+    navAboutUs.classList.toggle('show'); // Agrega o quita la clase 'show' para mostrar u ocultar la navegación
 }
 document.querySelectorAll('.gotoform').forEach(function (element) {
     element.addEventListener('click', function () {
