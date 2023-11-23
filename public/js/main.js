@@ -26,3 +26,12 @@ function toggleSubNavAboutus() {
     var nav = document.getElementById('submain-nav-aboutus');
     nav.classList.toggle('show'); // Agrega o quita la clase 'show' para mostrar u ocultar la navegación
 }
+document.querySelectorAll('.gotoform').forEach(function (element) {
+    element.addEventListener('click', function () {
+        var formTop = document.querySelector('.form_wraper').offsetTop - 120;
+        window.scrollTo({
+            top: formTop,
+            behavior: 'smooth'
+        });
+    });
+});

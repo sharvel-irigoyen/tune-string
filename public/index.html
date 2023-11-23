@@ -24,7 +24,8 @@
 </head>
 
 <body>
-    <header class="px-2 px-lg-5 py-2 w-100 d-lg-flex align-items-lg-center  justify-content-lg-around position-absolute">
+    <header
+        class="px-2 px-lg-5 py-2 w-100 d-lg-flex align-items-lg-center  justify-content-lg-around position-absolute">
         <div class="d-flex align-items-center justify-content-between">
             <img src="img/logo.png" />
             <i id="btn-menu" class="px-2 py-2 fa-solid fa-bars text-white d-lg-none cursor-pointer"
@@ -33,26 +34,27 @@
 
         <nav id="main-nav" class="trans" style="display:none">
             <ul class="d-flex flex-column flex-lg-row align-items-center">
-                <li class="text-white px-lg-3" onclick="toggleSubNavAboutus()"><a href="#">Nosotros</a></li>
-                <li class="text-white px-lg-3 position-lg-relative" onclick="toggleSubNavProd()"><a href="#">Productos</a>
-                    <nav id="submain-nav-prod" class="position-lg-absolute w-150 py-2" style="display: none;">
+                <li class="text-white px-lg-3 position-lg-relative" onclick="toggleSubNavAboutus()"><a
+                        href="#">Nosotros</a></li>
+                <li class="text-white px-lg-3 position-lg-relative cursor-pointer" onclick="toggleSubNavProd()"><a>Productos</a>
+                    <nav id="submain-nav-prod" class="submenu position-lg-absolute w-lg-150 py-2" style="display: none;">
                         <ul>
-                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Afinacion</a></li>
-                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Quintaje</a></li>
-                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Pedales digitales</a></li>
+                            <li class="px-lg-3 py-lg-1"><a href="#afinacion">Afinacion</a></li>
+                            <li class="px-lg-3 py-lg-1"><a href="#quintaje">Quintaje</a></li>
+                            <li class="px-lg-3 py-lg-1"><a href="#pedales">Pedales digitales</a></li>
                         </ul>
                     </nav>
                 </li>
-                <li class="text-white px-lg-3" onclick="toggleSubNavAboutus()"><a href="#">Nosotros</a>
-                    <nav id="submain-nav-aboutus" class="position-lg-absolute w-150 py-2" style="display: none;">
+                <li class="text-white px-lg-3 position-lg-relative cursor-pointer" onclick="toggleSubNavAboutus()"><a>Nosotros</a>
+                    <nav id="submain-nav-aboutus" class="position-lg-absolute w-lg-150 py-2 submenu" style="display: none;">
                         <ul>
-                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Mision</a></li>
-                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Vision</a></li>
-                            <li class="text-white px-lg-3 py-lg-1"><a href="#">Objetivos</a></li>
+                            <li class="px-lg-3 py-lg-1"><a href="#mision">Mision</a></li>
+                            <li class="px-lg-3 py-lg-1"><a href="#vision">Vision</a></li>
+                            <li class="px-lg-3 py-lg-1"><a href="#objetivos">Objetivos</a></li>
                         </ul>
                     </nav>
                 </li>
-                <li class="" onclick="toggleSubNavAboutus()"><a href="#">Contáctanos</a></li>
+                <li class="text-white px-lg-3 position-lg-relative gotoform cursor-pointer"><a>Contáctanos</a></li>
                 <li class="text-white px-lg-3 btn-login"><a href="login.html">Login</a></li>
             </ul>
         </nav>
@@ -62,12 +64,12 @@
         <section class="text-white cover banner">
             <div class="container w-100">
                 <div
-                    class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-around align-items-center section-header">
+                    class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-around align-items-center section-header px-lg-3">
                     <div>
                         <h1 class="fs-1">La primera app <br> <span class="text-pink">diseñada para</span> <br>amantes
                             de la música</h1>
                     </div>
-                    <div>
+                    <div class="align-self-end">
                         <img class="w-100" src="img/person-guitar.png">
                     </div>
                 </div>
@@ -75,54 +77,55 @@
         </section>
         <section class="productos">
             <div class="productos-container">
-                
-                    <h2 class="productos-title">DESCUBRE UNA NUEVA EXPERIENCIA EN AGILIZAR  Y MEJORAR TU INSTRUMENTO </h2>
-                    
+
+                <h2 class="productos-title">DESCUBRE UNA NUEVA EXPERIENCIA EN AGILIZAR Y MEJORAR TU INSTRUMENTO </h2>
+
                 <div class="productos-box">
-                    
-                    <div class="producto">
+
+                    <div class="producto" id="afinacion">
                         <h2>Afinación</h2>
                         <div class="img-box">
-                            <img src="img/afinacion.webp" alt="afinacion">                        
+                            <img src="img/afinacion.webp" alt="afinacion">
                             <p class="texto">Podras afinar alguno de los instrumentos musicales de cuerda
                                 que tengas en casa, como el bajo, la guitarra, el violin o el ukelele.</p>
                         </div>
                     </div>
-                    
-                    <div class="producto">
+
+                    <div class="producto" id="quintaje">
                         <h2>Quintaje premium</h2>
-                        <div class="img-box">                        
-                            <img src="img/quintaje.jpg" alt="Quintaje">                             
+                        <div class="img-box">
+                            <img src="img/quintaje.jpg" alt="Quintaje">
                             <p class="texto">Podras quintar cuerda por cuerda tu instrumento con ayuda
                                 de un medidor de afinación especializado.</p>
                         </div>
                     </div>
-                    
-                    <div class="producto">
+
+                    <div class="producto"  id="pedales">
                         <h2>Pedales Digitales</h2>
-                        <div class="img-box">                        
-                            <img src="img/pedales.jpg" alt="Efectos">                
+                        <div class="img-box">
+                            <img src="img/pedales.jpg" alt="Efectos">
                             <p class="texto">Aqui encontraras distintos pedales digitales que
                                 tenemos disponibles, para que asi pueda afinar
                                 tu instrumento de una forma mas rapida y sencilla.</p>
                         </div>
                     </div>
                 </div>
-            </div>         
+            </div>
         </section>
 
         <section class="nosotros">
             <div class="nosotros-box">
-                <h2>Nosotros</h2>                
-                <div class="mision">
+                <h2>Nosotros</h2>
+                <div id="mision" class="mision">
                     <h2>Misión</h2>
-                    <p>Nuestra misión es proporcionar soluciones tecnológicas innovadoras para una afinación precisa, ajuste
+                    <p>Nuestra misión es proporcionar soluciones tecnológicas innovadoras para una afinación precisa,
+                        ajuste
                         óptimo y efectos de alta calidad. Creemos en la inspiración que surge de la combinación
                         de tecnología y música, impulsando a músicos de todos los niveles a alcanzar su máximo
                         potencial creativo.
                     </p>
                 </div>
-                <div class="vision">
+                <div id="vision" class="vision">
                     <h2>Visión</h2>
                     <p>Nuestra visión es ser líderes en la transformación de la forma en que se crea, se comparte
                         y se disfruta la música en el mundo de los instrumentos de cuerda en el Perú. Queremos ser
@@ -131,7 +134,7 @@
                         todas las edades y niveles de experiencia.
                     </p>
                 </div>
-                <div class="objetivo">
+                <div id="objetivo" class="objetivo">
                     <h2>Objetivos</h2>
                     <ol>
                         <li>
@@ -146,25 +149,29 @@
                         </li>
                         <br>
                         <li>
-                            Empoderar a músicos de todas las edades y niveles de experiencia mediante programas educativos
-                            que maximicen el uso de nuestras soluciones tecnológicas, contribuyendo al desarrollo continuo
+                            Empoderar a músicos de todas las edades y niveles de experiencia mediante programas
+                            educativos
+                            que maximicen el uso de nuestras soluciones tecnológicas, contribuyendo al desarrollo
+                            continuo
                             de la comunidad musical.
                         </li>
                     </ol>
                 </div>
                 <div class="video">
-                    <h2>About the team:</h2>                    
-                    <iframe src="https://www.youtube.com/embed/JX6nNbGqumQ?autoplay=1&mute=1" autoplay=1  frameborder="0" allowfullscreen>
+                    <h2>About the team:</h2>
+                    <iframe src="https://www.youtube.com/embed/JX6nNbGqumQ?autoplay=1&mute=1" autoplay=1 frameborder="0"
+                        allowfullscreen>
                         Video about the team.
                     </iframe>
                 </div>
                 <div class="video">
-                    <h2>About the Product:</h2>                    
-                    <iframe src="https://www.youtube.com/embed/TcbVf-yYDcQ?si=bBNVktnLtjARO4W1?autoplay=1&mute=1" autoplay=1  frameborder="0" allowfullscreen>
+                    <h2>About the Product:</h2>
+                    <iframe src="https://www.youtube.com/embed/TcbVf-yYDcQ?si=bBNVktnLtjARO4W1?autoplay=1&mute=1"
+                        autoplay=1 frameborder="0" allowfullscreen>
                         Video about the product.
                     </iframe>
                 </div>
-            </div>            
+            </div>
         </section>
 
         <section class="Plan">
@@ -185,7 +192,7 @@
                             <p class="plan-texto-izquierda">&#x2713; Afinador estándar</p>
                             <p class="plan-texto-izquierda">&#x2717; Quintaje</p>
                             <p class="plan-texto-izquierda">&#x2717; Pedales digitales</p>
-                            <button class="plan-button-1">REGISTRATE</button>
+                            <a href="registro.html" class="plan-button-1">REGISTRATE</a>
                         </div>
                     </div>
 
@@ -202,14 +209,14 @@
                             <p class="plan-texto-izquierda">&#x2713; Más de 10 tipos de afinaciones</p>
                             <p class="plan-texto-izquierda">&#x2713; Quintaje</p>
                             <p class="plan-texto-izquierda">&#x2713; Más de 100 Pedales digitales</p>
-                            <button class="plan-button-2">REGISTRATE</button>
+                            <a href="registro.html" class="plan-button-2 cursor-pointer">REGISTRATE</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="Contacto">
+        <section id="contactanos" class="Contacto">
             <div class="Contactos">
                 <div class="Texto-Contacto">
                     <h1 class="Texto1">¿Quieres destacar en el mundo de la música?
@@ -218,7 +225,7 @@
                 </div>
                 <div class="Box-Contacto">
                     <h2 class="Texto2">Contáctanos</h2>
-                    <form action="" method="post">
+                    <form class="form_wraper" action="" method="post">
                         <label for="nombre">Nombre</label>
                         <br>
                         <input type="text" name="nombre">
@@ -232,12 +239,12 @@
                         <input type="text" name="correo">
                         <br>
                         <div class="checkbox-container">
-                            <input type="checkbox" name="acepto_politica">
+                            <input id="acepto_politica" type="checkbox" name="acepto_politica">
                             <label for="acepto_politica">Acepto la política y protección de datos personales</label>
                         </div>
                         <div class="boton-contact">
                             <br>
-                            <button class="boton-contact-submit" type="submit">Registrar</button>
+                            <a href="registro.html" class="boton-contact-submit" type="submit">Registrar</a>
 
                         </div>
                     </form>

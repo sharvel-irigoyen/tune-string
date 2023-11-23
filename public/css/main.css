@@ -47,6 +47,9 @@ main section:first-child{
 .align-items-center{
     align-items: center !important;
 }
+.align-self-end {
+    align-self: flex-end !important;
+  }
 .align-items-start{
     align-items: start !important;
 }
@@ -95,6 +98,9 @@ main section:first-child{
 
 
 @media screen and (min-width: 992px) {
+    .w-lg-150{
+        width: 150% !important;
+    }
     .d-lg-flex{
         display: flex !important;
     }
@@ -104,6 +110,9 @@ main section:first-child{
     .flex-lg-row{
         flex-direction: row !important;
     }
+    .align-self-lg-end {
+        align-self: flex-end !important;
+      }
     .justify-content-lg-center{
         justify-content: center !important;
     }
@@ -176,6 +185,18 @@ main section:first-child{
     #main-nav{
         display: block !important;
     }
+    section.banner{
+        height: 100vh;
+    }
+    section.banner .container{
+        height: calc(100vh - 70px);
+    }
+    section.banner .d-flex{
+        height: inherit !important;
+    }
+    section.banner .d-flex div:nth-child(2){
+        width: 530px;
+    }
 
 }
 header.h_fixed{position:fixed!important;animation:smoothScroll 1s forwards;box-shadow:0 0 60px rgb(0 0 0 / 50%);z-index:1001;top:0}
@@ -239,7 +260,7 @@ header img {
     border-radius: 0px 20px 20px 0px;
     margin-bottom: 30px;
     margin-left: -10px;
-    
+
 }
 
 .mision h2{
@@ -253,7 +274,7 @@ header img {
 
 .vision{
     background-color: #26297B;
-    padding: 30px;    
+    padding: 30px;
     border-radius: 20px 0px 0px 20px;
     margin-bottom: 30px;
     margin-right: -10px;
@@ -270,7 +291,7 @@ header img {
 
 .objetivo{
     background-color: #26297B;
-    padding: 30px;    
+    padding: 30px;
     border-radius: 0px 20px 20px 0px;
     margin-bottom: 30px;
     margin-left: -10px;
@@ -293,7 +314,7 @@ header img {
 }
 
 .video{
-    width: 100%;    
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -330,9 +351,9 @@ header img {
         width: 45%;
         align-self: flex-start;
     }
-    
+
     .video{
-        
+
     }
 
     .video iframe{
@@ -394,7 +415,7 @@ header img {
 .linea-horizontal {
     border: none;
     border-top: 2px solid white;
-    
+
 
 }
 .plan h3 {
@@ -413,11 +434,13 @@ header img {
 .plan p {
     font-size: 15px;
 }
-.plan button{
+.plan button,
+.plan a{
     margin-top: 30px;
     width: 95%;
     border-radius: 15px;
     padding: 10px;
+    display: inline-block;
 }
 .plan-button-1{
     background-color: #8DCF38;
@@ -595,27 +618,35 @@ header img {
 .checkbox-container {
     display: flex;
     align-items:flex-start;
-    
-    
+
+
     padding-right: 20px;
 }
 .checkbox-container input {
     margin-left:10px;
     margin-top: 7px;
     transform: scale(1.5);
-    
+
 }
 
 input{
-    border-radius: 10px; 
+    border-radius: 10px;
     padding: 5px;
 }
 .checkbox-container label {
     padding-left: 15px;
     font-size: 17px;
 }
-
-
+nav.submenu {
+    background-color: #30082c;
+    color:#fff;
+    margin-top: 10px;
+    position: relative !important;
+}
+nav li{
+    width: 100%;
+    text-align: center;
+}
 @media screen and (min-width: 768px) {
     .Contactos {
         display: flex;
@@ -624,7 +655,12 @@ input{
         align-items: center;
         height: 100vh;
     }
-
+    nav.submenu {
+        background-color: #adff2f;
+        color:#1c002c;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
 
 
     .Texto-Contacto{
@@ -644,4 +680,3 @@ input{
         width: 35%;
     }
 }
-
